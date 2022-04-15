@@ -1,3 +1,28 @@
+<?php
+include('config.php');
+if(isset($_REQUEST['submit']))
+{
+     
+        
+        $floor=$_REQUEST['floor'];
+        $block=$_REQUEST['block'];
+        $room=$_REQUEST['room'];
+        $bed=$_REQUEST['bed'];
+
+        $sql="INSERT into  availablebed(floor,block,room,bed) values('$floor','$block','$room','$bed')";
+        if($conn->query($sql)==true)
+        {
+            $p='<div>Successfully Inserted</div>';
+        }
+
+        else
+        {
+            $p='<div class="alert alert-warning">Wrong Try</div>';
+        } 
+}
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
