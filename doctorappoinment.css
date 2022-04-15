@@ -1,0 +1,128 @@
+.sec2{
+    background: indigo;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+.col1{
+    text-align: left;
+    font-family: cursive;
+    font-size: 20px;
+
+    padding: 150px 100px 0 150px;
+    color: rgb(218, 231, 28);
+    width: 50%;
+}
+
+.col2{
+    color: white;
+    padding: 120px 150px 0 0;
+    width: 50%;
+    font-family: cursive;
+    text-align: justify;
+
+}
+.sec3{
+    background: #ececec;
+    padding: 70px 0 80px 0;
+    text-align: center;
+}
+
+.sec3{
+    background: #ecf0f3;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.box{
+
+    
+    height: 550px;
+    width: 30%;
+    border-radius: 45px;
+    box-shadow: 10px 10px 20px gray,-10px -10px 20px white;
+    padding: 60px 50px 30px 30px;
+    background: #ecf0f3;
+    overflow: hidden;
+    margin-top: 20px;
+   
+}
+.h2{
+    color: yellowgreen;
+    text-align: center;
+    font-size: 20px;
+}
+.subtitle{
+    padding: 20px;
+    color: indianred;
+}
+
+.input-filed{
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    padding-top: 15px;
+}
+
+.user,.mail,.phone{
+    padding: 15px 10px 15px 10px;
+    width: 100%;
+    border:none;
+    outline: none;
+    background: none;
+    box-shadow: inset 7px 7px 5px gray, inset -7px -7px 5px white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.upzilla, .district{
+    width: 40%;
+    margin-left: 5px;
+    border: none;
+    padding: 15px 15px 15px 15px;
+    outline: none;
+    background: none;
+    box-shadow: inset 7px 7px 5px gray, inset -7px -7px 5px white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.description{
+    padding: 20px 10px 40px 10px;
+    width: 100%;
+    border:none;
+    outline: none;
+    background: none;
+    box-shadow: inset 7px 7px 5px gray, inset -7px -7px 5px white;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    flex-direction: row;
+}
+
+.file, .btn{
+    padding: 10px;
+   
+    width: 45%;
+    border-radius: 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    box-shadow: 8px 8px 5px gray, -8px -8px 5px white;
+}
+.btn{
+    margin-left: 15px;
+    width: 30%;
+}
+.file{
+    margin-left: 10px;
+}
+
+.footer{
+    background:indigo;
+    height: 30px;
+    width: 100%;
+    padding:30px 0 10px 0;
+    text-align: center;
+    color: yellow;
+
+}
