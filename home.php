@@ -2,7 +2,7 @@
 <html>
     <head>
        <link href="home.css" rel="stylesheet">
-        <title>Nagorik</title>
+        <title>24support</title>
         <script src="https://kit.fontawesome.com/76235dc605.js" crossorigin="anonymous"></script>
     <style type="text/css">
         <link rel="icon" href="img/homeicon.png">
@@ -27,9 +27,9 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="about.php">About Us</a></li>
                 <li><a href="donation.php">Donation</a></li>
-                <li><a href="organization.php">Organization</a></li>
-                <li><a href="shareRequest.php">Share Request</a></li>
-                <li><a href="area.php">Area</a></li>
+                <li><a href="organization.php">Report Status</a></li>
+                <li><a href="shareRequest.php">Doctor Appoinment</a></li>
+                <li><a href="area.php">Check availability</a></li>
                 <li><a href="event.php">Successful Event</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
 
