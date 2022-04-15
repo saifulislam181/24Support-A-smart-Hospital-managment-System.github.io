@@ -56,6 +56,16 @@
                 <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
               </a>
               </div>
+
+
+               <div class="avail-bed">
+                <a href="available-bed.php">
+                <i class="fas fa-newspaper"></i>
+                <h2>Check Bed</h2>
+                <p>Insert bed or cable information</p> <br>
+                <a class="showlist"href="check-bed.php">Show List</a>
+              </a>
+              </div>
           
 
               </div>
