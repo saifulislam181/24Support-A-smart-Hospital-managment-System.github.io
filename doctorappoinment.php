@@ -48,7 +48,7 @@ if(isset($_REQUEST['submit']))
     <body>
         <!--start share request header part-->
         <div class="header">
-            <img src="img/logo.png" class="logo-img">
+            <img src="img/log2.png" class="logo-img">
             <ul>
                 <li><a href="home.php">Home</a></li>
                 <li><a href="about.php">About Us</a></li>
@@ -56,7 +56,7 @@ if(isset($_REQUEST['submit']))
                 <li><a href="organization.php">Report Status</a></li>
                 <li><a href="#">Doctor Appoinment</a></li>
                 <li><a href="area.php">Check availability</a></li>
-                <li><a href="event.php">Successful Event</a></li>
+                <li><a href="dashboard.php">Admin Panel</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
 
             </ul>
@@ -64,7 +64,7 @@ if(isset($_REQUEST['submit']))
 
         <div class="sec2">
             <div class="col1">
-            <h1>Welcome!<br>Share Request Page</h1>
+            <h1>Welcome!<br>Doctor Appoinment</h1>
         </div>
 
 

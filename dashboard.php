@@ -19,7 +19,7 @@
 
 		
 			<i class="fas fa-sign-out-alt" id="logoutIcon"></i>
-			<h4>Logout</h4><br>
+			<a href="home.php"><h4>Home</h4><br>
 
 		</div>
 
