@@ -59,7 +59,7 @@
 			margin-right: 5px;
 		}
 	</style>
-	</head>
+</head>
 <body>
 
 	<div class="section1">
@@ -74,7 +74,31 @@
 			<th>Bed_No</th>
 		</tr>
 
-	
+<?php
+	include('config.php');
+	$sql='SELECT * from availablebed';
+	$result=$conn->query($sql);
+
+	if($result->num_rows>0)
+	{
+		while($row=$result->fetch_assoc())
+			{
+				echo "
+				<tr>
+				<td>".$row["floor"]."</td>
+				<td>".$row["block"]."</td>
+				<td>".$row["room"]."</td>
+				<td>".$row["bed"]."</td>
+				</tr>";
+			}
+			
+			echo "</table>";
+	}
+	else{
+		echo "Null Result";
+	}
+
+?> 
 
 	</table>
 
