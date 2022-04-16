@@ -58,7 +58,7 @@
               </div>
 
 
-               <div class="avail-bed">
+               <div class="statuspost">
                 <a href="available-bed.php">
                 <i class="fas fa-newspaper"></i>
                 <h2>Check Bed</h2>
