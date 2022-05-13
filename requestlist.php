@@ -50,6 +50,14 @@
 							btn.addEventListener('click', function (){
 							let msgHolder = document.querySelector('#msgHolder');
 							let todo_id = prompt("Enter Phone Number:");
+							fetch('http://localhost/24support/requestlist.php')
+								.then(response => response.json())
+								.then(myObj => {
+						// msgHolder.innerHTML = JSON.stringify(myObj);
+							msgHolder.innerHTML = myObj.status;
+							document.querySelector('#details').innerHTML = myObj.content[0].name + ' ' + myObj.content[0].phone;
+
+							});
 							});	
 					  </script>
 					
