@@ -91,7 +91,7 @@ if(isset($_REQUEST['submit']))
                     <textarea rows="5"name="info" cols="30" class="description" placeholder="Problem description" required></textarea><br>
                   <!--  <input type="file" name="file" class="file"placeholder="upload" accept="image/*" required>
 -->
-                    <input type="submit" class="btn" value="Upload Post"name='submit'>
+                    <input type="submit" class="btn" value="Submit Info"name='submit'>
                   
                 </div>
             </form>
