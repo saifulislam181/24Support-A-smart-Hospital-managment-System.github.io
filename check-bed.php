@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -66,42 +67,73 @@
 		<h1>Available Bed List</h1>
 	</div>
 	
-	<table class="table1">
-		<tr>
-			<th>Floor_No.</th>
-			<th>Block</th>
-			<th>Room_No</th>
-			<th>Bed_No</th>
-		</tr>
 
-<?php
+
+	<?php
+	$floor = "";
+	$block = "";
+	$room = "";
+	$bed = "";
+	$id = 0;
+
+
 	include('config.php');
 	$sql='SELECT * from availablebed';
-	$result=$conn->query($sql);
+	if($result = mysqli_query($conn, $sql)){
+                        if(mysqli_num_rows($result) > 0){
+                            echo '<table class="table table-bordered table-striped">';
+                                echo "<thead>";
+                                    echo "<tr>";
+                                        echo "<th>#</th>";
+                                        echo "<th>floor</th>";
+                                        echo "<th>block</th>";
+                                        echo "<th>room</th>";
+                                        echo "<th>bed</th>";
+                                        echo "<th>Action</th>";
 
-	if($result->num_rows>0)
-	{
-		while($row=$result->fetch_assoc())
-			{
-				echo "
-				<tr>
-				<td>".$row["floor"]."</td>
-				<td>".$row["block"]."</td>
-				<td>".$row["room"]."</td>
-				<td>".$row["bed"]."</td>
-				</tr>";
-			}
-			
-			echo "</table>";
-	}
-	else{
-		echo "Null Result";
-	}
+                                    echo "</tr>";
+                                echo "</thead>";
+                                echo "<tbody>";
+                                while($row = mysqli_fetch_array($result)){
+                                    echo "<tr>";
+                                        echo "<td>" . $row['id'] . "</td>";
+                                        echo "<td>" . $row['floor'] . "</td>";
+                                        echo "<td>" . $row['block'] . "</td>";
+                                        echo "<td>" . $row['room'] . "</td>";
+                                        echo "<td>" . $row['bed'] . "</td>";
 
-?> 
+                                        echo "<td>";
+                                          
+                                            echo '<a href="update-bed.php?id='. $row['id'] .'" class="mr-3" title="Update Record" data-toggle="tooltip"><span class="fa fa-pencil"></span></a>';
+                                            echo '<a href="delete-bed.php?id='. $row['id'] .'" title="Delete Record" data-toggle="tooltip"><span class="fa fa-trash"></span></a>';
+                                        echo "</td>";
+                                    echo "</tr>";
+                                }
+                                echo "</tbody>";                            
+                            echo "</table>";
+                            // Free result set
+                            mysqli_free_result($result);
+                        } else{
+                            echo '<div class="alert alert-danger"><em>No records were found.</em></div>';
+                        }
+                    } else{
+                        echo "Oops! Something went wrong. Please try again later.";
+                    }
+ 
+                    // Close connection
+                    mysqli_close($conn);
+                    ?>
 
-	</table>
 
-	<a href="home.php" class="back"><i class="fas fa-home"></i>Back to Home</a>
+
+
+
+	
+
+
+
+
+
+	<a href="dashboard.php" class="back"><i class="fas fa-home"></i>Back to DashBoard</a>
 </body>
 </html>
