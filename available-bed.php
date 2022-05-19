@@ -41,7 +41,9 @@ if(isset($_REQUEST['save']))
              }
              #form{
                 border-radius: 30px;
+
              }
+
          </style>
     </head>
 
@@ -52,7 +54,7 @@ if(isset($_REQUEST['save']))
                 <div class="form border border-success p-4" id="form">
                 <form method='POST'>
 
-                <div><h3 class="text-center text-success"><i class="pr-2 fas fa-donate"></i>Available Beds</h3></div>
+                <div style="color: #182C61;"><h3 class="text-center text-success">Available Beds</h3></div>
 
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <label for="floor">Floor_No.</label><br>
@@ -63,22 +65,22 @@ if(isset($_REQUEST['save']))
 
                 <div class="row">
                     <div class="col-sm-6">
-                         <label for="room">Room_No</label><br>
-                        <input type="text" name="room" class="form-control" value="<?php echo $room; ?>"><br>
+                         <label for="room">Room No:</label><br>
+                        <input type="number" name="room" class="form-control" value="<?php echo $room; ?>"><br>
                     </div>
                     <div class="col-sm-6">
-                    <label for="bed">Bed_No</label><br>
+                    <label for="bed">Bed No:</label><br>
                 <input type="text" name="bed" class="form-control" value="<?php echo $bed; ?>"required><br>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-6 mt-2">
-                <button class="btn btn-success form-control" type="submit" name="save"><i class="pr-1 fas fa-donate"></i>Save</button>
+                <button class="btn btn-success form-control" type="submit" name="save">Save</button>
 
                 <?php if ($update == true): ?>
                     <button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
                 <?php else: ?>
-                    <button class="btn" type="submit" name="save" >Save</button>
+                    <button class="btn" type="submit" name="save" ></button>
                 <?php endif ?>
                 <?php 
 
