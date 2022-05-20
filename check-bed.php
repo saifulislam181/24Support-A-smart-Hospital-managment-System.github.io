@@ -15,6 +15,51 @@
 			text-decoration: none;
 		}
 
+		.header{
+    height: 50px;
+    width: 100%;
+    background: #ececec;;
+    color: indigo;
+    position: relative;
+    overflow: hidden;
+    padding-top: 25px;
+    position: fixed;
+    z-index: 1;
+   
+}
+.logo-img{
+    width: 80px;
+    height: 80px;
+    padding-left: 25px;
+    margin-left: 25px;
+    margin-top: -20px;
+
+}
+.header ul{
+    float: right;
+    margin-right: 20px;
+}
+.header ul li{
+    display: inline-block;
+    list-style-type: none;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 15px;
+    padding: 3px;
+    outline: none;
+    background: none;
+    border:none;
+    margin-left: 7px;
+    box-shadow:  5px 5px 2px gray, -5px -5px 2px white;
+}
+.header ul li a{
+    padding:33px 25px;
+    transition: 0.7s ease;
+    color: indigo;
+    text-decoration: none;
+    
+}
+
 		.section1{
 			text-align: center;
 			color: #0984e3;
@@ -65,6 +110,20 @@
 	</style>
 </head>
 <body>
+
+	<div class="header">
+            <img src="img/Log2.jpg" class="logo-img">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="about.php">About Us</a></li>
+                <li><a href="donation.php">Donation</a></li>
+                <li><a href="organization.php">Report Status</a></li>
+                <li><a href="doctorappoinment.php">Doctor Appoinment</a></li>
+                <li><a href="check-bed.php">Check availability</a></li>
+                <li><a href="contact.php">Contact Us</a></li>
+
+            </ul>
+        </div>
 
 	<div class="section1">
 		<h1>Available Bed List</h1>
