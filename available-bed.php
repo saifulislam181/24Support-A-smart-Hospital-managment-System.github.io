@@ -48,13 +48,12 @@ if(isset($_REQUEST['save']))
     </head>
 
     <body>
-        <!--start donation header part-->
       <div class="container mt-4" id="sec1">
        
                 <div class="form border border-success p-4" id="form">
                 <form method='POST'>
 
-                <div style="color: #182C61;"><h3 class="text-center text-success">Available Beds</h3></div>
+                <div><h3 class="text-center text-success">Available Beds</h3></div>
 
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <label for="floor">Floor_No.</label><br>
