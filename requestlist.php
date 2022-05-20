@@ -39,6 +39,32 @@
 
 	<div class="container mt-5 " id="head">
 		<h2 class="text-success">Requester List</h2>
+			<div style="padding: 30px;">
+					<a href="doctorappoinment.php" class="back">Add New Appointment</a>
+					<br>	
+
+				      <button id= "btnGetData" class="ui right floated button" type="submit">Search</button>
+					  <p id="msgHolder">For Search Click the Search Button</p>
+					  <script>
+					  		let btn=document.querySelector('#btnGetData');
+							btn.addEventListener('click', function (){
+							let msgHolder = document.querySelector('#msgHolder');
+							let todo_id = prompt("Enter Phone Number:");
+							fetch('http://localhost/24support/requestlist.php')
+								.then(response => response.json())
+								.then(myObj => {
+						// msgHolder.innerHTML = JSON.stringify(myObj);
+							msgHolder.innerHTML = myObj.status;
+							document.querySelector('#details').innerHTML = myObj.content[0].name + ' ' + myObj.content[0].phone;
+
+							});
+							});	
+					  </script>
+					
+				</div>
+		
+		
+		
 		<table class="table table-striped table-bordered table-hover mt-3 mb-3">
 			<thead>
 				<tr>

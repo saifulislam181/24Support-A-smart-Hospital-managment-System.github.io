@@ -40,7 +40,7 @@
         <div class="bg">
             <div class="title">
                 <h1>Welcome to 24Support</h1>
-                <h2>using this site for make a simple life and harselless also save your time.</h2>
+                <h2>An Online Medic Helper.</h2>
             </div>
          
         </div>
@@ -48,9 +48,9 @@
      <!--section 02-->
 
         <div class="sec2">
-            <h1>Important Notice : !!!</h1>
+            <h1>Important Notice !!!</h1>
             <div class="border-bottom"></div>
-            <p>A e report and managment system.</p>
+            <p>An e-report and managment system.</p>
             
        </div>
 
@@ -112,9 +112,8 @@
             <div class="orga">
                 <div class="orga1">
                     <h3>Md.Saiful Islam</h3>
-                    <p1>  A heart deises patient.   Who did not pay the hospital bill.The hospital discount 50% of bill.  In this situation he need to an Operation as soon as possible.  Your small contribution will save him life.    Ibn sina Hospital.Bed no 14. 
+                    <p1>  A heart deises patient.Who did not pay the hospital bill.The hospital discounts 50% of bill.  In this situation he need an Operation as soon as possible.Your small contribution will save his life.Ibn sina Hospital Bed no 14 
 					</p1>
-					<\n>
                     <a href="moneydonation.php">Click Here</a>
                 </div>
 
@@ -126,7 +125,7 @@
 
                 <div class="orga3">
                     <h3>Sreeja Dey</h3>
-                    <p>A mental patient who was out of her menatality by an accident.A major operation needs for her.But her family did not abale to pay the operation bill.Hospital have already 40% discount but need more then 3 lakhs tk.Pleae help her and save her life.Your small contribution whii be save a life.Ibn sina Hospital Bed no 16 </p>
+                    <p>A mental patient who was out of her menatality by an accident.A major operation needs for her.But her family did not abale to pay the operation bill.Pleae help her and save her life.Ibn sina Hospital Bed no 16 </p>
                     <a href="moneydonation.php">Click Here</a>
                 </div>
 
@@ -145,7 +144,7 @@
 
         <!--footer section-->
         <div class="footer">
-            <h4>Copyright &copy:2021 |All right Reserved</h4>
+            <h4>Copyright &copy 2022 |All Rights Reserved</h4>
 
         </div>
     </body>

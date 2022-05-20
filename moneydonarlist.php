@@ -66,6 +66,17 @@
 	<div class="section1">
 		<h1>Money Donar List</h1>
 	</div>
+	<div style="padding: 30px;">
+					<a href="moneydonation.php"><button class="ui fluid button">Add New Doner</button></a>
+					<br>	
+					<form class="ui form" method="post" action="searchresult.php">
+				      <div class="field">
+				        <!-- <label>Name</label> -->
+				        <input type="text" name="search_query" placeholder="Seach Contacts...">
+				      </div>
+				      <button class="ui right floated button" type="submit">Search</button>
+				    </form>
+				</div>
 	
 	<table class="table1">
 		<tr>

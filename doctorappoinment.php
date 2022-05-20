@@ -78,7 +78,7 @@ if(isset($_REQUEST['submit']))
             <div class="box">
             <form method="POST" action="">
                 <div class="h2"><h2>Doctor Appoinment</h2></div>
-               <p class="subtitle"> Please fill all information</p>
+               <p id="msgHolder" class="subtitle"> Please fill all information</p>
                 <div class="input-field">
  
                     <input type="text" name="name"placeholder="Enter Your name" class="user" required><br>
@@ -91,12 +91,29 @@ if(isset($_REQUEST['submit']))
                     <textarea rows="5"name="info" cols="30" class="description" placeholder="Problem description" required></textarea><br>
                   <!--  <input type="file" name="file" class="file"placeholder="upload" accept="image/*" required>
 -->
-                    <input type="submit" class="btn" value="Submit Info"name='submit'>
+                    <input id="btnGetData" type="submit" class="btn" value="Submit Info"name='submit'>
+					
+					<script>
+					let btn=document.querySelector('#btnGetData');
+					btn.addEventListener('click', function (){
+						let msgHolder = document.querySelector('#msgHolder');
+						msgHolder.innerHTML = "Please wait, You will get a confirmation as soon as possible.Thankoyu.....";
+						
+						
+
+						});
+					
+					
+				</script>
+					
                   
                 </div>
+				
             </form>
+			
                
         </div>
+		
     </div>
 
 

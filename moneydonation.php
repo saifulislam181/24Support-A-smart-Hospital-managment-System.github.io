@@ -82,11 +82,30 @@ if(isset($_REQUEST['submit']))
         </div>
         <div class="row">
             <div class="col-sm-6 mt-2">
-                <button class="btn btn-success form-control" type="submit" name="submit"><i class="pr-1 fas fa-donate"></i>Donate</button>
+                <button id = btnGetData class="btn btn-success form-control" type="submit" name="submit"><i class="pr-1 fas fa-donate"></i>Donate</button>
+				<script>
+				
+				let btn=document.querySelector('#btnGetData');
+					btn.addEventListener('click', function (){
+						let msgHolder = document.querySelector('#msgHolder');
+						msgHolder.innerHTML = "Please wait, You will get a confirmation as soon as possible.Thank You.....";
+						let todo_id = prompt("Please enter a referance number:");
+						fetch('http://localhost/24support/moneydonarlist.php')
+							.then(response => response.json())
+							.then(myObj => {
+						// msgHolder.innerHTML = JSON.stringify(myObj);
+						msgHolder.innerHTML = myObj.status;
+						document.querySelector('#details').innerHTML = myObj.content[0].name + ' ' + myObj.content[0].phone;
+							});
+					}) ;
+						
+				
+				</script>
             </div>
 
             <div class="col-sm-6">
                 <button class=" mt-2 btn btn-danger form-control"><a href="donation.php">Cancel Donation</a><i class="pl-2 fas fa-arrow-left"></i></button>
+				
             </div>
 
         </div>
@@ -94,6 +113,7 @@ if(isset($_REQUEST['submit']))
                
            
             </form>
+			<p id="msgHolder">Please fill up all the information for submit your Donation</p>
         </div>
         </div>
 
