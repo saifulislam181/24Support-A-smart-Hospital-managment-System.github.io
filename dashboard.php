@@ -62,7 +62,7 @@
                 <a href="available-bed.php">
                 <i class="fas fa-newspaper"></i>
                 <h2>Check Bed</h2>
-                <p>Insert bed or cable information</p> <br>
+                <p>Insert bed or cabin information</p> <br>
                 <a class="showlist"href="check-bed.php">Show List</a>
               </a>
               </div>

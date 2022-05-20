@@ -29,8 +29,7 @@
                 <li><a href="donation.php">Donation</a></li>
                 <li><a href="organization.php">Report Status</a></li>
                 <li><a href="doctorappoinment.php">Doctor Appoinment</a></li>
-                <li><a href="check-bed.php">Check availability</a></li>
-                <li><a href="dashboard.php">Admin Panel</a></li>
+                <li><a href="check-bed.php">Bed Availability</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
 
             </ul>
