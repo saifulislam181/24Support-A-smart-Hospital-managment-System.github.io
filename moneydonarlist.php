@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -86,7 +87,8 @@
 			<th>Phone</th>
 			<th>Account_No</th>
 			<th>Amount</th>
-			<th>Payment_Method)</th>
+			<th>Payment_Method</th>
+			<th>Action</th>
 
 		</tr>
 
@@ -99,7 +101,7 @@
 	{
 		while($row=$result->fetch_assoc())
 			{
-				echo "<tr><td>".$row["Name"]."</td><td>".$row["Email"]."</td><td>".$row["Phone"]."</td><td>".$row["Account_No"]."</td><td>".$row["Amount"]."</td><td>".$row["Payment_Method"]."</td></tr>";
+				echo "<tr><td>".$row["Name"]."</td><td>".$row["Email"]."</td><td>".$row["Phone"]."</td><td>".$row["Account_No"]."</td><td>".$row["Amount"]."</td><td>".$row["Payment_Method"]."</td><td><a href = 'delete.php?name=$row[Name]'> Delete </a></td></tr>";
 			}
 			
 			echo "</table>";
