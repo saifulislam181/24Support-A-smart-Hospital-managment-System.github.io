@@ -1,0 +1,3 @@
+<?phpinclude("config.php");error_reporting(0);
+	$Name = $_GET["name"];	$query = "DELETE FROM moneydonation WHERE Name = '$Name'";	$data=mysqli_query($conn,$query);	if($data)	{		echo "<font color='red'>Record Deleted from Database";	}	else	{		echo "<font color='red'>Faild Deleted from Database";			}	?><style type="text/css">		.back{			background: #05A966;			text-align: center;			padding: 15px;			border-radius: 40px;			margin-left: 550px;			font-size: 15px;			font-weight: bold;			color: yellow;		}		.back:hover{			background:white;			color: #05A966;			border:1px solid #E5EB2E;		}		.back i{			margin-right: 5px;		}	</style>
+<a href="moneydonarlist.php" class="back"><i class="fas fa-home"></i>Back to DashBoard</a>

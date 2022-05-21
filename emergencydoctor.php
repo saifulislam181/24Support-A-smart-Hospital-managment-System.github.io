@@ -1,20 +1,24 @@
 <!--Donation page-->
 <?php
 $update=false;
-$block = "";
+$name= "";
+$depertment = "";
 $room = "";
-$bed = "";
+$phone = "";
+$floor = "";
 include('config.php');
 if(isset($_REQUEST['save']))
 {
      
         
-        $floor=$_REQUEST['floor'];
-        $block=$_REQUEST['block'];
+        $name=$_REQUEST['name'];
+        $depertment=$_REQUEST['depertment'];
         $room=$_REQUEST['room'];
-        $bed=$_REQUEST['bed'];
+        $phone=$_REQUEST['phone'];
+        $floor=$_REQUEST['floor'];
 
-        $sql="INSERT into  availablebed(floor,block,room,bed) values('$floor','$block','$room','$bed')";
+
+        $sql="INSERT into  emergencydoctor (name,depertment,room,phone, floor) values('$name','$depertment','$room','$phone', $floor)";
         if($conn->query($sql)==true)
         {
             $p='<div>Successfully Inserted</div>';
@@ -41,71 +45,49 @@ if(isset($_REQUEST['save']))
              }
              #form{
                 border-radius: 30px;
-
              }
-
          </style>
     </head>
 
     <body>
+        <!--start donation header part-->
       <div class="container mt-4" id="sec1">
        
                 <div class="form border border-success p-4" id="form">
                 <form method='POST'>
 
-                <div><h3 class="text-center text-success">Available Beds</h3></div>
+                <div><h3 class="text-center text-success"><i class="pr-2 fas fa-donate"></i>Available phones</h3></div>
 
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
-                <label for="floor">Floor_No.</label><br>
-                <input type="number" name="floor" class="form-control" value="<?php echo $floor; ?>"><br>
+                <label for="name">name</label><br>
+                <input type="text" name="name" class="form-control" value="<?php echo $name; ?>"><br>
 
-                <label for="block">Block</label><br>
-                <input type="" name="block" class="form-control" value="<?php echo $block; ?>"required><br>
+                <label for="depertment">depertment</label><br>
+                <input type="text" name="depertment" class="form-control" value="<?php echo $depertment; ?>"required><br>
 
                 <div class="row">
                     <div class="col-sm-6">
-                         <label for="room">Room No:</label><br>
-                        <input type="number" name="room" class="form-control" value="<?php echo $room; ?>"><br>
+                         <label for="room">Room_No</label><br>
+                        <input type="text" name="room" class="form-control" value="<?php echo $room; ?>"><br>
                     </div>
                     <div class="col-sm-6">
-                    <label for="bed">Bed No:</label><br>
-                <input type="text" name="bed" class="form-control" value="<?php echo $bed; ?>"required><br>
+                    <label for="phone">Phone_No</label><br>
+                <input type="number" name="phone" class="form-control" value="<?php echo $phone; ?>"required><br>
+                <label for="phone">Floor</label><br>
+                <input type="number" name="floor" class="form-control" value="<?php echo $floor; ?>"required><br>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-6 mt-2">
-                <button class="btn btn-success form-control" type="submit" name="save">Save</button>
+                <button class="btn btn-success form-control" type="submit" name="save"><i class="pr-1 fas fa-donate"></i>Save</button>
 
                 <?php if ($update == true): ?>
                     <button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
                 <?php else: ?>
-                    <button class="btn" type="submit" name="save" ></button>
+                    <button class="btn" type="submit" name="save" >Save</button>
                 <?php endif ?>
-                <?php 
 
-                if (isset($_POST['update'])) {
-    $id = $_POST['id'];
-    $floor = $_POST['floor'];
-    $block = $_POST['block'];
-    $room = $_POST['room'];
-    $bed = $_POST['bed'];
-
-
-    mysqli_query($db_name, "UPDATE availablebed SET floor='$floor', block='$block', room='$room', bed='$bed' WHERE id=$id");
-    $_SESSION['message'] = "Address updated!"; 
-    header('location: available-bed.php');
-
-
-
-    if (isset($_GET['del'])) {
-    $id = $_GET['del'];
-    mysqli_query($db_name, "DELETE FROM availablebed WHERE id=$id");
-    $_SESSION['message'] = "Address deleted!"; 
-    header('location: check-bed.php');
-}
-}   
-
-                ?>
+                
             </div>
 
 
