@@ -41,6 +41,21 @@
     <div class="col-sm-3">
     </div>
   </div>
-</div>
+</div><script type="text/javascript">
+  $(document).ready(function(){
+    $("#search").keypress(function(){
+      $.ajax({
+        type:'POST',
+        url:'serback.php',
+        data:{
+          name:$("#search").val(),
+        },
+        success:function(data){
+          $("#output").html(data);
+        }
+      });
+    });
+  });
+</script>
 </body>
 </html>
