@@ -94,7 +94,13 @@ if(isset($_REQUEST['submit']))
         </div>
         <div class="row">
             <div class="col-sm-6 mt-2">
-                <button class="btn btn-info form-control" type="submit" name="submit">Donate Blood</button>
+                <button id="btnGetData" class="btn btn-info form-control" type="submit" name="submit">Donate Blood</button>
+                        let btn=document.querySelector('#btnGetData');
+                        btn.addEventListener('click', function (){
+                        let msgHolder = document.querySelector('#msgHolder');
+                        msgHolder.innerHTML = "Please wait, You will get a confirmation as soon as possible.Thank You.....";
+                        }) ;
+                        
             </div>
 
             <div class="col-sm-6">
@@ -107,6 +113,7 @@ if(isset($_REQUEST['submit']))
            
             </form>
         </div>
+        <p id="msgHolder">Please fill up all the information for submit your Donation</p>
         </div>
 
        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
