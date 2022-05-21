@@ -95,11 +95,14 @@ if(isset($_REQUEST['submit']))
         <div class="row">
             <div class="col-sm-6 mt-2">
                 <button id="btnGetData" class="btn btn-info form-control" type="submit" name="submit">Donate Blood</button>
+                <script>
                         let btn=document.querySelector('#btnGetData');
                         btn.addEventListener('click', function (){
                         let msgHolder = document.querySelector('#msgHolder');
                         msgHolder.innerHTML = "Please wait, You will get a confirmation as soon as possible.Thank You.....";
                         }) ;
+
+                        </script>
                         
             </div>
 
