@@ -64,7 +64,7 @@
 <body>
 
 	<div class="section1">
-		<h1>Available Bed List</h1>
+		<h1>Prescription List</h1>
 	</div>
 	
 

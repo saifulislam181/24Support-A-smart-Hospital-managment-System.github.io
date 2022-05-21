@@ -30,6 +30,7 @@
                 <li><a href="organization.php">Report Status</a></li>
                 <li><a href="doctorappoinment.php">Doctor Appoinment</a></li>
                 <li><a href="check-bed.php">Bed Availability</a></li>
+                <li><a href="emergencydoctor.php">Emergency Doc</a></li>
                 <li><a href="contact.php">Contact Us</a></li>
 
             </ul>
