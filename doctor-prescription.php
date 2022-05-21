@@ -1,4 +1,3 @@
-<!--Donation page-->
 <?php
 $update=false;
 $name= "";
@@ -58,37 +57,99 @@ if(isset($_REQUEST['save']))
                 <div class="form border border-success p-4" id="form">
                 <form method='POST'>
 
-                <div><h3 class="text-center text-success"><i class="pr-2 fas fa-donate"></i>Doctor Prescription</h3></div>
+                <div><h3 class="text-center text-success">Doctor Prescription</h3></div>
 
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <label for="name">Name</label><br>
-                <input type="text" name="name" class="form-control" value="<?php echo $name; ?>"><br>
+                <input id= "userName" type="text" name="name" class="form-control" value="<?php echo $name; ?>"><br>
 
                 <label for="age">Age</label><br>
-                <input type="text" name="age" class="form-control" value="<?php echo $age; ?>"required><br>
+                <input id= "userAge" type="text" name="age" class="form-control" value="<?php echo $age; ?>"required><br>
 
                 <div class="row">
                     <div class="col-sm-6">
                          <label for="gender">Gender</label><br>
-                        <input type="text" name="gender" class="form-control" value="<?php echo $gender; ?>"><br>
+                        <input id= "userGender" type="text" name="gender" class="form-control" value="<?php echo $gender; ?>"><br>
                     </div>
                     <div class="col-sm-6">
                     <label for="phone">Phone_No</label><br>
-                <input type="number" name="phone" class="form-control" value="<?php echo $phone; ?>"required><br>
+                <input id= "userPhone" type="text" name="phone" class="form-control" value="<?php echo $phone; ?>"required><br>
                 <label for="bloodGroup">Blood Group</label><br>
-                <input type="number" name="bloodGroup" class="form-control" value="<?php echo $bloodGroup; ?>"><br>
+                <input id= "userBlood" type="text" name="bloodGroup" class="form-control" value="<?php echo $bloodGroup; ?>"><br>
                 <label for="medicine">Medicine</label><br>
-                <input type="text" name="medicine" class="form-control" value="<?php echo $medicine; ?>" required><br>
+                <input id= "userMedicine" type="text" name="medicine" class="form-control" value="<?php echo $medicine; ?>" required><br>
             </div>
         </div>
         <div class="row">
             <div class="col-sm-6 mt-2">
-                <button class="btn btn-success form-control" type="submit" name="save"><i class="pr-1 fas fa-donate"></i>Save</button>
+                <input type="hidden" id="user_id" />
+                <button id="getUser" value="Get Details" class="btn btn-success form-control" type="submit" name="save"><i class="pr-1 fas fa-donate"></i>Save</button>
+
+                <script>
+                $(document).ready(function(){
+                    $('#getUser').on('click',function(){
+                        var user_id = $('#user_id').val();
+                        $.ajax({
+                            type:'POST',
+                            url:'doctor-prescription.php',
+                            dataType: "json",
+                            data:{user_id:user_id},
+                            success:function(data){
+                                if(data.status == 'ok'){
+                                    $('#userName').text(data.result.name);
+                                    $('#userAge').text(data.result.email);
+                                    $('#userGender').text(data.result.email);
+                                    $('#userPhone').text(data.result.phone);
+                                    $('#userBlood').text(data.result.created);
+                                    $('#userMedicine').text(data.result.created);
+                                    $('.user-content').slideDown();
+                                }else{
+                                    $('.user-content').slideUp();
+                                    alert("User not found...");
+                                } 
+                            }
+                        });
+                    });
+                });
+                </script>
+                <!-- yufyufjlfuljhuf -->
+
+                <?php
+                if(!empty($_POST['user_id'])){
+                    $data = array();
+                    
+                    //database details
+                    $host="localhost";
+                    $user="root";
+                    $pass="";
+                    $db_name="nagorikapps";
+                    
+                    //create connection and select DB
+                    $db = new mysqli($host, $user, $pass, $db_name);
+                    if($db->connect_error){
+                        die("Unable to connect database: " . $db->connect_error);
+                    }
+                    
+                    //get user data from the database
+                    $query = $db->query("SELECT * FROM prescription WHERE id = {$_POST['user_id']}");
+                    
+                    if($query->num_rows > 0){
+                        $userData = $query->fetch_assoc();
+                        $data['status'] = 'ok';
+                        $data['result'] = $userData;
+                    }else{
+                        $data['status'] = 'err';
+                        $data['result'] = '';
+                    }
+                    
+                    //returns data as JSON format
+                    echo json_encode($data);
+                }
+                ?>
+
 
                 <?php if ($update == true): ?>
-                    <button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>
-                <?php else: ?>
-                    <button class="btn" type="submit" name="save" >Save</button>
+                    <button class="btn" type="submit" name="update" style="background: #556B2F;" >update</button>                    
                 <?php endif ?>
 
                 
